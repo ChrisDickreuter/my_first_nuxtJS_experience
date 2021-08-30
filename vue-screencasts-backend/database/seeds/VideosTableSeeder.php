@@ -1,8 +1,9 @@
 <?php
 
+use App\Video as Video;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class VideosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('VideosTableSeeder');
+        $videos = factory(Video::class, 10)->create();
     }
 }
