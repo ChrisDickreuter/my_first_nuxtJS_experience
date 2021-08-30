@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// Video API
+$router->get('video', ['uses' => 'VideoController@index']);
+$router->get('video/{id}', ['uses' => 'VideoController@show']);
