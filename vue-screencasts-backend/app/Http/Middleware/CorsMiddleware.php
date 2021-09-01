@@ -20,8 +20,8 @@ class CorsMiddleware
         $IlluminateResponse = 'Illuminate\Http\Response';
         $SymfonyResopnse = 'Symfony\Component\HttpFoundation\Response';
         $headers = [
-            'Access-Control-Allow-Origin' => 'http://localhost:3000',
-            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
+            'Access-Control-Allow-Origin' => env('CORS_ALLOW_URL', 'http://localhost:3000'),
+            'Access-Control-Allow-Methods' => 'GET',
             'Access-Control-Allow-Credentials' => 'true',
             'Access-Control-Max-Age' => '86400',
             'Access-Control-Allow-Headers' => 'Content-Type, Authorization, X-Requested-With'
