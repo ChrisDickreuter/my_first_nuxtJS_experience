@@ -42,7 +42,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://api.vue-screencast.de'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
