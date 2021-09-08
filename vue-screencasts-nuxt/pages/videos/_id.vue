@@ -12,14 +12,20 @@
                 titleTemplate: `%s ${this.video.name} - Vue Screencasts`
             }
         },
-        async asyncData({$axios, params}) {
+        
+        async asyncData({$axios, params, store}) {
             let response = await $axios.get(`/video/${params.id}`)
             let video = response.data
 
-            return {
-               video
-            }
+            store.commit('SET_CURRENT_VIDEO', video)
         },
+
+        computed: {
+            video() {
+                return this.$store.state.currentVideo
+            }
+        }
+
     }
 </script>
 
