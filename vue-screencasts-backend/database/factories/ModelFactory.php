@@ -20,7 +20,7 @@ $factory->define(Video::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
         'description' => $faker->text, 
-        'thumbnail' => $faker->url, 
+        'thumbnail' => $faker->imageUrl($width = 640, $height = 480), 
         'videoUrl' => $faker->url,
     ];
 });
