@@ -4,9 +4,9 @@
             <v-btn text to="/">Vue Screencasts</v-btn>
             <v-btn text to="/videos">Videos</v-btn>
         </v-app-bar>
-        <v-content>
+        <v-main>
             <nuxt />
-        </v-content>      
+        </v-main>      
     </v-app>
 </template>
 
